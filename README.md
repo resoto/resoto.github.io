@@ -1,4 +1,4 @@
-### This is a homepage script
+# This is a homepage script
 
 Access to
 ```
