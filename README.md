@@ -1,6 +1,6 @@
-# This is a homepage script
+# This is a BCASim homepage script
 
 Access to
 ```
-http://localhost:8080
+https://BCASim.github.io/
 ```
