@@ -1,0 +1,39 @@
+<body>
+    <input type="button" value="開始" onclick="cal_square_root();"/><br />
+    <textarea id="num_area1" cols="40" rows="1">2</textarea>
+    <textarea id="num_area2" cols="40" rows="1">10</textarea>
+    <table id="tbl" border="1">
+        <tr>
+          <th>回数</th>
+          <th>平方根</th>
+        </tr>
+      </table>
+</body>
+
+<script>
+
+
+function cal_square_root(){
+    var table = document.getElementById("tbl");
+    var number = Number(document.getElementById('num_area1').value);
+    var counter = Number(document.getElementById('num_area2').value);
+    var left = 0.0;
+    var right = number;
+    var mid = 0.0;
+    for(var i = 1; i <= counter; i++) {
+        mid = (left + right) / 2;
+        var row = table.insertRow(-1);
+        var cell1 = row.insertCell(0);
+        var cell2 = row.insertCell(1);
+        cell1.innerHTML = i;
+        cell2.innerHTML = mid;
+        if(mid * mid - number < 0){
+            left = mid;
+            console.log(mid);
+        }else {
+            right = mid;
+            console.log(mid);
+        }
+    }
+}
+</script>
