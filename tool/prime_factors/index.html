@@ -1,0 +1,46 @@
+<body>
+    <input type="button" value="開始" onclick="cal_prime_mumber(10000);"/><br />
+    <table id="tbl" border="1">
+        <tr>
+          <th>No.</th>
+          <th>素因数</th>
+        </tr>
+      </table>
+</body>
+
+<script>
+
+function cal(num){
+    var num_str = "1";
+    for (var n = 2; n < n + 1; n++) {
+        if (num % n == 0) {
+            for (var m = 1; m < m + 1; m++) {
+                if (num % n == 0) {
+                    num_str += "×"+ n;
+                    var num = num / n;
+                } else {
+                    break;
+                }
+            }
+        }
+        if (num == 1) {
+            break;
+        }
+    }
+    return num_str;
+}
+
+function cal_prime_mumber(munber){
+    var conut = 1;
+    var table = document.getElementById("tbl");
+
+    for(var i=1; i<munber; i++){
+        var row = table.insertRow(-1);
+        var cell1 = row.insertCell(0);
+        var cell2 = row.insertCell(1);
+        cell1.innerHTML = i;
+        cell2.innerHTML = cal(i);
+        conut++;
+    }
+}
+</script>
