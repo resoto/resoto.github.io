@@ -1,0 +1,41 @@
+計算速度比較
+
+--kt--
+・10万
+real    0m1.759s
+user    0m1.475s
+sys     0m0.505s
+・100万
+real    1m12.037s
+user    1m9.397s
+sys     0m2.942s
+
+
+--c--
+・10万
+real    0m1.491s
+user    0m1.161s
+sys     0m0.330s
+・100万
+real    1m11.921s
+user    1m9.520s
+sys     0m2.401s
+
+
+--js--
+・10万
+real    0m2.349s
+user    0m2.010s
+sys     0m0.406s
+・100万
+real    1m20.008s
+user    1m17.851s
+sys     0m2.231s
+
+--py--
+・10万
+real    0m30.166s
+user    0m29.906s
+sys     0m0.260s
+・100万
+終わらない
