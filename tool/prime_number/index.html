@@ -1,5 +1,6 @@
 <body>
-    <input type="button" value="開始" onclick="cal_prime_mumber(10000);"/><br />
+    <input type="button" value="開始" onclick="cal_prime_mumber();"/><br />
+    <textarea id="num_area" cols="40" rows="1">100</textarea>
     <table id="tbl" border="1">
         <tr>
           <th>No.</th>
@@ -11,11 +12,11 @@
 <script>
 
 
-function cal_prime_mumber(munber){
+function cal_prime_mumber(){
     var conut = 1;
     var table = document.getElementById("tbl");
-
-    for(var i=1; i<munber; i++){
+    var number = Number(document.getElementById('num_area').value);
+    for(var i=1; i<number; i++){
         for(var j=2; j<=i; j++){
             if(i==j){
                 var row = table.insertRow(-1);
