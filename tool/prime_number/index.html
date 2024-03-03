@@ -16,7 +16,7 @@ function cal_prime_mumber(){
     var conut = 1;
     var table = document.getElementById("tbl");
     var number = Number(document.getElementById('num_area').value);
-    for(var i=1; i<number; i++){
+    for(var i=1; i<=number; i++){
         for(var j=2; j<=i; j++){
             if(i==j){
                 var row = table.insertRow(-1);

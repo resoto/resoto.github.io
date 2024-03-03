@@ -33,17 +33,14 @@ function cal(num){
 }
 
 function counter(){
-    var conut = 1;
     var table = document.getElementById("tbl");
     var number = Number(document.getElementById('num_area').value);
-    console.log(number);
-    for(var i=1; i<number; i++){
+    for(var i=1; i<=number; i++){
         var row = table.insertRow(-1);
         var cell1 = row.insertCell(0);
         var cell2 = row.insertCell(1);
         cell1.innerHTML = i;
         cell2.innerHTML = cal(i);
-        conut++;
     }
 }
 </script>

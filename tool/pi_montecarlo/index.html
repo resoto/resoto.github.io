@@ -1,0 +1,46 @@
+<body>
+    <input type="button" value="開始" onclick="counter();"/><br />
+    <textarea id="num_area" cols="40" rows="1">100</textarea>
+    
+    <table id="tbl" border="1">
+        <tr>
+          <th>回数</th>
+          <th>円周率</th>
+          <th>判定</th>
+          <th>判定値</th>
+        </tr>
+      </table>
+</body>
+
+<script>
+
+function counter(){
+    var table = document.getElementById("tbl");
+    var number = Number(document.getElementById('num_area').value);
+
+    var in_square = 0;
+    var in_circle = 0;
+    for(var i=0;i<=number;i++){
+        var row = table.insertRow(1);
+        var x = Math.random() * 1;
+        var y = Math.random() * 1;
+        in_square += 1;
+
+        var cell4 = row.insertCell(0);
+        cell4.innerHTML = x * x + y * y;
+        var cell3 = row.insertCell(0);
+        if (x * x + y * y <= 1){
+            in_circle += 1;
+            cell3.innerHTML = "○";
+        }else{
+            cell3.innerHTML = "×";
+        }
+
+        var pi = (in_circle / in_square) * 4;
+        var cell1 = row.insertCell(0);
+        var cell2 = row.insertCell(0);
+        cell1.innerHTML = pi;
+        cell2.innerHTML = i;
+    }
+}
+</script>
