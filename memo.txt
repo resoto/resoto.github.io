@@ -10,7 +10,6 @@ real    1m12.037s
 user    1m9.397s
 sys     0m2.942s
 
-
 --c--
 ・10万
 real    0m1.491s
@@ -20,7 +19,6 @@ sys     0m0.330s
 real    1m11.921s
 user    1m9.520s
 sys     0m2.401s
-
 
 --js--
 ・10万
@@ -39,3 +37,4 @@ user    0m29.906s
 sys     0m0.260s
 ・100万
 終わらない
+
