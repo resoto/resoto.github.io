@@ -27,12 +27,12 @@ function cal_square_root(){
         var cell2 = row.insertCell(1);
         cell1.innerHTML = i;
         cell2.innerHTML = mid;
-        if(mid * mid - number < 0){
+        if(mid * mid - number == 0){
+            break;
+        }else if(mid * mid - number < 0){
             left = mid;
-            console.log(mid);
         }else {
             right = mid;
-            console.log(mid);
         }
     }
 }
